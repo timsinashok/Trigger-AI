@@ -1,0 +1,28 @@
+{
+  "name": "Trigger AI Extension",
+  "version": "0.2",
+  "manifest_version": 3,
+  "description": "Try Chrome's built-in prompt API.",
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["sidePanel", "aiLanguageModelOriginTrial", "activeTab", "scripting", "tabs", "webNavigation"],
+  "trial_tokens": [
+    "Put your token here"
+  ],
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "minimum_chrome_version": "131",
+  "action": {
+    "default_popup": "sidepanel/index.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "Open Chat Interface"
+  }
+}
